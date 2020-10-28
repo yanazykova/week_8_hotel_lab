@@ -1,5 +1,7 @@
 <template>
-  <main> Hotel Bookings </main>
+  <main> 
+  <booking-grid></booking-grid>
+  </main>
 </template>
 
 <script>
