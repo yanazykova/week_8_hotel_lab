@@ -19,6 +19,7 @@ const createRouter = function (collection) {
 
      router.post('/', (req, res) => {
          const NewData =  req.body; 
+         console.log("the request body is ", NewData)
          collection
          .insertOne(NewData)
          .then((result) => {

@@ -18,8 +18,11 @@ export default {
     },
     mounted(){
         hotelService.getBookings()
-        .then(bookings 
-        => this.bookings = bookings)
+        .then(bookings => this.bookings = bookings)
+        eventBus.$on('booking-added', (booking) => {
+            this.bookings.push(booking)
+        })
+
     },
     components:{
         'booking': Booking

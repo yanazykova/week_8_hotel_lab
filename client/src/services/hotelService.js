@@ -1,4 +1,4 @@
-const BaseURL = 'http://localhost:3000/api/bookings'
+const BaseURL = 'http://localhost:3000/api/bookings/'
 
 export default {
     getBookings(){
@@ -6,6 +6,8 @@ export default {
         .then(res => res.json())
     },
     postBooking(payload){
+        console.log("payload for postBooking is", payload)
+        console.log("the payload string applied is", JSON.stringify(payload))
         return fetch(BaseURL, {
             method:'POST',
             body: JSON.stringify(payload),
