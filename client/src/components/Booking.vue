@@ -18,7 +18,8 @@ export default {
             hotelService.deleteBooking(this.booking._id)
             .then(() => eventBus.$emit('delete-booking'))
         }
-    }
+    },
+    props:['booking']
 }
 </script>
 

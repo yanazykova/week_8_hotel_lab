@@ -7,10 +7,23 @@
 <script>
 import {eventBus} from '@/main.js'
 import hotelService from '@/services/hotelService.js'
-import Booking from './Bookings'
+import Booking from './Booking'
 
 export default {
-
+    name: 'bookings-grid',
+    data(){
+        return {
+            bookings: []
+        };
+    },
+    mounted(){
+        hotelService.getBookings()
+        .then(bookings 
+        => this.bookings = bookings)
+    },
+    components:{
+        'booking': Booking
+    }
 }
 </script>
 

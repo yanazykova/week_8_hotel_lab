@@ -1,12 +1,18 @@
 <template>
   <main> 
-  <booking-grid></booking-grid>
+  <bookings-grid></bookings-grid>
   </main>
 </template>
 
 <script>
-export default {
+import BookingsGrid from '@/components/BookingsGrid'
 
+
+export default {
+  name: 'app',
+  components: {
+    'bookings-grid': BookingsGrid
+  }
 }
 </script>
 
